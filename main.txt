@@ -1,0 +1,208 @@
+git commands:
+----------------
+[root@ip-172-31-15-191 ec2-user]# git --version
+bash: git: command not found
+[root@ip-172-31-15-191 ec2-user]# yum install git
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                               | 2.4 kB     00:00
+Resolving Dependencies
+--> Running transaction check
+---> Package git.x86_64 0:2.17.2-2.amzn2 will be installed
+--> Processing Dependency: perl-Git = 2.17.2-2.amzn2 for package: git-2.17.2-2.a                                          mzn2.x86_64
+--> Processing Dependency: git-core-doc = 2.17.2-2.amzn2 for package: git-2.17.2                                          -2.amzn2.x86_64
+--> Processing Dependency: git-core = 2.17.2-2.amzn2 for package: git-2.17.2-2.a                                          mzn2.x86_64
+--> Processing Dependency: emacs-filesystem >= 25.3 for package: git-2.17.2-2.am                                          zn2.x86_64
+--> Processing Dependency: perl(Term::ReadKey) for package: git-2.17.2-2.amzn2.x                                          86_64
+--> Processing Dependency: perl(Git::I18N) for package: git-2.17.2-2.amzn2.x86_6                                          4
+--> Processing Dependency: perl(Git) for package: git-2.17.2-2.amzn2.x86_64
+--> Processing Dependency: libsecret-1.so.0()(64bit) for package: git-2.17.2-2.a                                          mzn2.x86_64
+--> Running transaction check
+---> Package emacs-filesystem.noarch 1:25.3-3.amzn2.0.1 will be installed
+---> Package git-core.x86_64 0:2.17.2-2.amzn2 will be installed
+---> Package git-core-doc.noarch 0:2.17.2-2.amzn2 will be installed
+---> Package libsecret.x86_64 0:0.18.5-2.amzn2.0.2 will be installed
+---> Package perl-Git.noarch 0:2.17.2-2.amzn2 will be installed
+--> Processing Dependency: perl(Error) for package: perl-Git-2.17.2-2.amzn2.noar                                          ch
+---> Package perl-TermReadKey.x86_64 0:2.30-20.amzn2.0.2 will be installed
+--> Running transaction check
+---> Package perl-Error.noarch 1:0.17020-2.amzn2 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package              Arch       Version                   Repository      Size
+================================================================================
+Installing:
+ git                  x86_64     2.17.2-2.amzn2            amzn2-core     217 k
+Installing for dependencies:
+ emacs-filesystem     noarch     1:25.3-3.amzn2.0.1        amzn2-core      64 k
+ git-core             x86_64     2.17.2-2.amzn2            amzn2-core     4.0 M
+ git-core-doc         noarch     2.17.2-2.amzn2            amzn2-core     2.3 M
+ libsecret            x86_64     0.18.5-2.amzn2.0.2        amzn2-core     153 k
+ perl-Error           noarch     1:0.17020-2.amzn2         amzn2-core      32 k
+ perl-Git             noarch     2.17.2-2.amzn2            amzn2-core      70 k
+ perl-TermReadKey     x86_64     2.30-20.amzn2.0.2         amzn2-core      31 k
+
+Transaction Summary
+================================================================================
+Install  1 Package (+7 Dependent packages)
+
+Total download size: 6.8 M
+Installed size: 36 M
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/8): emacs-filesystem-25.3-3.amzn2.0.1.noarch.rpm        |  64 kB   00:00
+(2/8): git-2.17.2-2.amzn2.x86_64.rpm                       | 217 kB   00:00
+(3/8): git-core-doc-2.17.2-2.amzn2.noarch.rpm              | 2.3 MB   00:00
+(4/8): git-core-2.17.2-2.amzn2.x86_64.rpm                  | 4.0 MB   00:00
+(5/8): libsecret-0.18.5-2.amzn2.0.2.x86_64.rpm             | 153 kB   00:00
+(6/8): perl-Error-0.17020-2.amzn2.noarch.rpm               |  32 kB   00:00
+(7/8): perl-Git-2.17.2-2.amzn2.noarch.rpm                  |  70 kB   00:00
+(8/8): perl-TermReadKey-2.30-20.amzn2.0.2.x86_64.rpm       |  31 kB   00:00
+--------------------------------------------------------------------------------
+Total                                               30 MB/s | 6.8 MB  00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : git-core-2.17.2-2.amzn2.x86_64                               1/8
+  Installing : git-core-doc-2.17.2-2.amzn2.noarch                           2/8
+  Installing : libsecret-0.18.5-2.amzn2.0.2.x86_64                          3/8
+  Installing : 1:perl-Error-0.17020-2.amzn2.noarch                          4/8
+  Installing : perl-TermReadKey-2.30-20.amzn2.0.2.x86_64                    5/8
+  Installing : 1:emacs-filesystem-25.3-3.amzn2.0.1.noarch                   6/8
+  Installing : perl-Git-2.17.2-2.amzn2.noarch                               7/8
+  Installing : git-2.17.2-2.amzn2.x86_64                                    8/8
+  Verifying  : 1:emacs-filesystem-25.3-3.amzn2.0.1.noarch                   1/8
+  Verifying  : perl-TermReadKey-2.30-20.amzn2.0.2.x86_64                    2/8
+  Verifying  : 1:perl-Error-0.17020-2.amzn2.noarch                          3/8
+  Verifying  : libsecret-0.18.5-2.amzn2.0.2.x86_64                          4/8
+  Verifying  : git-core-2.17.2-2.amzn2.x86_64                               5/8
+  Verifying  : git-2.17.2-2.amzn2.x86_64                                    6/8
+  Verifying  : perl-Git-2.17.2-2.amzn2.noarch                               7/8
+  Verifying  : git-core-doc-2.17.2-2.amzn2.noarch                           8/8
+
+Installed:
+  git.x86_64 0:2.17.2-2.amzn2
+
+Dependency Installed:
+  emacs-filesystem.noarch 1:25.3-3.amzn2.0.1
+  git-core.x86_64 0:2.17.2-2.amzn2
+  git-core-doc.noarch 0:2.17.2-2.amzn2
+  libsecret.x86_64 0:0.18.5-2.amzn2.0.2
+  perl-Error.noarch 1:0.17020-2.amzn2
+  perl-Git.noarch 0:2.17.2-2.amzn2
+  perl-TermReadKey.x86_64 0:2.30-20.amzn2.0.2
+
+Complete!
+[root@ip-172-31-15-191 ec2-user]#
+[root@ip-172-31-15-191 ec2-user]#
+[root@ip-172-31-15-191 ec2-user]#
+[root@ip-172-31-15-191 ec2-user]# git --version
+git version 2.17.2
+[root@ip-172-31-15-191 ec2-user]#
+login as: ec2-user
+Authenticating with public key "imported-openssh-key"
+Last login: Wed Sep 25 09:06:19 2019 from 183.83.205.225
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+7 package(s) needed for security, out of 10 available
+Run "sudo yum update" to apply all updates.
+
+
+[ec2-user@ip-172-31-15-191 ~]$ git clone https://github.com/Ajithkumar752/GIT-pr                                          actise.git
+Cloning into 'GIT-practise'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+[ec2-user@ip-172-31-15-191 ~]$
+[ec2-user@ip-172-31-15-191 ~]$
+[ec2-user@ip-172-31-15-191 ~]$ ls
+GIT-practise
+[ec2-user@ip-172-31-15-191 ~]$ cd GIT-practise/
+[ec2-user@ip-172-31-15-191 GIT-practise]$ ls
+README.md
+[ec2-user@ip-172-31-15-191 GIT-practise]$ ls -la
+total 4
+drwxrwxr-x 3 ec2-user ec2-user  35 Sep 25 09:18 .
+drwx------ 4 ec2-user ec2-user  94 Sep 25 09:18 ..
+drwxrwxr-x 8 ec2-user ec2-user 163 Sep 25 09:18 .git
+-rw-rw-r-- 1 ec2-user ec2-user  28 Sep 25 09:18 README.md
+
+
+[ec2-user@ip-172-31-15-191 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-15-191 ~]$ mkdir GIT-Dir
+[ec2-user@ip-172-31-15-191 ~]$ ls
+GIT-Dir  GIT-practise
+[ec2-user@ip-172-31-15-191 ~]$ cd GIT-practise/
+[ec2-user@ip-172-31-15-191 GIT-Dir]$ ls -la
+total 0
+drwxrwxr-x 2 ec2-user ec2-user   6 Sep 25 09:26 .
+drwx------ 5 ec2-user ec2-user 109 Sep 25 09:26 ..
+
+
+[ec2-user@ip-172-31-15-191 GIT-Dir]$ git init
+Initialized empty Git repository in /home/ec2-user/GIT-Dir/.git/
+[ec2-user@ip-172-31-15-191 GIT-Dir]$ ls -la
+total 0
+drwxrwxr-x 3 ec2-user ec2-user  18 Sep 25 09:28 .
+drwx------ 5 ec2-user ec2-user 109 Sep 25 09:26 ..
+drwxrwxr-x 7 ec2-user ec2-user 119 Sep 25 09:28 .git
+
+
+[ec2-user@ip-172-31-15-191 GIT-Dir]$ touch GIT
+[ec2-user@ip-172-31-15-191 GIT-Dir]$ ls -la
+total 0
+drwxrwxr-x 3 ec2-user ec2-user  29 Sep 25 09:28 .
+drwx------ 5 ec2-user ec2-user 109 Sep 25 09:26 ..
+drwxrwxr-x 7 ec2-user ec2-user 119 Sep 25 09:28 .git
+-rw-rw-r-- 1 ec2-user ec2-user   0 Sep 25 09:28 GIT
+[ec2-user@ip-172-31-15-191 GIT-Dir]$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        GIT
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+[ec2-user@ip-172-31-15-191 GIT-Dir]$ git add GIT
+[ec2-user@ip-172-31-15-191 GIT-Dir]$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   GIT
+
+
+[ec2-user@ip-172-31-15-191 GIT-Dir]$ git commit -m "practise"
+[master (root-commit) acfa340] practise
+ Committer: EC2 Default User <ec2-user@ip-172-31-15-191.ap-south-1.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 GIT
