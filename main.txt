@@ -206,3 +206,5 @@ After doing this, you may fix the identity used for this commit with:
 
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 GIT
+
+[ec2-user@ip-172-31-15-191 GIT-Dir]$ git push
